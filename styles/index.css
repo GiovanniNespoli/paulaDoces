@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    background-color: #00AEB9;
+
+    box-shadow: 0 10px 10px rgba(136, 136, 136, 0.394);
+    position: fixed;
+}
+
+.areaNav {
+    width: 75%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 35%;
+    height: 100%;
+    margin-left: 70px;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    transition: 0.2s;
+
+}   
+
+li:hover{
+    transform: scale(1.1);
+}
+
+header div.content {
+    display: flex;
+}
+
+.content {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+}
+
+.navImg {
+    width: 186px;
+}
+
+.telefone {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botaoNav {
+    padding: 10px 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: capitalize;
+    font-family: Bebas Neue;
+    cursor: pointer;
+}
+
+.clickNav {
+    text-decoration: none;
+    color: #fff;
+    font-size: 28px;
+    text-transform: capitalize;
+    font-family: Bebas Neue;
+    letter-spacing: 1px;
+}
+
+.banner {
+    width: 100%;
+    height: 52.5vh;
+    background-color: #00AEB9;
+}
+
+.espaco {
+    width: 100%;
+    height: 15vh;
+}
+
+section.banner div.content {
+    display: flex;
+    justify-content: center;
+}
+
+.sobreNos {
+    width: 100%;
+    height: 50vh;
+    background-color: #292929;
+}
+section.sobreNos div.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.txt-sobreNos {
+    color: #fff;
+    font-size: 24px;
+    font-family: Bebas Neue;
+    width: 40%;
+    text-align: center;
+}
+
+.vantagens {
+    width: 100%;
+    height: 50vh;
+    background-color: #00AEB9;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section.vantagens div p {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapaTxt,
+section.vantagens p {
+    color: #fff;
+    font-size: 30px;
+    font-family: Bebas Neue;
+}
+
+section.vantagens div.content {
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgVantagens {
+    transition: 0.35s;
+}
+
+.imgVantagens:hover {
+    transform: scale(1.1);
+}
+
+.mapaTxt {
+    padding-top: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 15vh;
+    background-color: #E1A7C3;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: #fff;
+    font-size: 20px;
+    font-family: Bebas Neue;
+}
