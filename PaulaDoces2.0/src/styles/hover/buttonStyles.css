@@ -1,0 +1,38 @@
+.button {
+    width: 40%;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 15px;
+}
+
+.button-2 {
+    color: #fff;
+    border: 3px solid #E1A7C3;
+    background-image: -webkit-linear-gradient(30deg, #E1A7C3 00%, transparent 50%);
+    background-image: linear-gradient(30deg, #E1A7C3 50%, transparent 50%);
+    background-size: 660px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 800ms ease-in-out;
+    transition: background 800ms ease-in-out;
+}
+
+.button-2:hover {
+    background-position: 100%;
+    background-color: #44d8e300;
+    color: #fff;
+}
+
+@media only screen and (max-width: 700px) {
+
+
+}

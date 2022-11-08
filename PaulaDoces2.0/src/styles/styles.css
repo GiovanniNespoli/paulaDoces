@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&family=Red+Hat+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:
+        url('../../assets/background.svg') no-repeat;
+
+    background-size: cover;
+}
+
+header,
+#headerContent {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    width: 100vw;
+    height: 13vh;
+    justify-content: center;
+}
+
+
+#headerContent {
+    width: 85vw;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+header #headerContent .teste  {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header #headerContent div #ball {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50px;
+    margin-left: 0.2rem;
+
+    background-color: #E1A7C3;
+}
+
+header #headerContent nav {
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #headerContent div h3 {
+    color: white;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+
+    width: 40%;
+    text-align: center;
+}
+
+header #headerContent nav div {
+    margin-left: 2rem;
+    width: 65%;
+}
+
+header #headerContent nav div ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #headerContent nav div ul li {
+    list-style-type: none;
+    transition: 0.5s;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+header #headerContent nav div ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+header #headerContent nav button {
+    width: 20%;
+    height: 40%;
+
+    background-color: #44d8e300;
+    border: 1px solid #000;
+    border-radius: 5px;
+
+    color: #000;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header #headerContent nav button:hover {
+    transform: scale(1.1);
+}
+
+
+header #headerContent nav div ul li:hover {
+    transform: scale(1.1);
+}
+
+main {
+    width: 100vw;
+    height: 87vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+main img {
+    width: 40%;
+    margin-bottom: 5rem;
+}
+
+main div {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+main div div {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main div div h1 {
+    color: #FFF;
+    font-size: 50px;
+    font-family: Poppins;
+    font-weight: 700;
+
+}
+
+main div div p {
+    text-align: left;
+    font-size: 24px;
+    color: #FFF;
+    font-family: 'Red Hat Text', sans-serif;
+
+    margin: 5rem 0px;
+
+}
+
+@media only screen and (max-width: 1400px) {
+    main img {
+        width: 50%;
+    }
+    
+    header #headerContent nav {
+       width: 63%;
+    }
+
+    main div {
+        justify-content: center;
+        align-items: center;
+    }
+
+    main div div h1,
+    main div div p {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header #headerContent .teste{
+        display: none;
+    }
+
+    header #headerContent nav {
+        width: 100vw;
+    }
+
+    main img {
+        display: none;
+    }
+
+    main div {
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header #headerContent nav button,
+    header #headerContent nav div ul li a{
+        font-size: 1.1rem;
+        padding: 2px;
+    }
+
+    header #headerContent nav {
+        width: 85vw;
+    }
+}
