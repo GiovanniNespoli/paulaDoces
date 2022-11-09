@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&family=Red+Hat+Text:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background:
+        url('../../assets/background.svg') no-repeat;
+
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body main {
+    width: 75vw;
+    height: 60vh;
+    background-color: #fff;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.342);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body main #content {
+    width: 90%;
+    height: 80%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+body main #content section {
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+body main #content section button {
+    width: 35%;
+    height: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(90deg, rgba(225, 167, 195, 1), rgba(208, 154, 180, 1));
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+body main #content section button:hover {
+    transform: scale(1.1);
+}
+
+.material-symbols-outlined {
+    color: #fff;
+    margin-right: 2rem;
+}
+
+body main #content section button a {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body main #content section div {
+    width: 50%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+}
+
+body main #content section div #ball {
+    width: 5rem;
+    height: 5rem;
+    background-color: #E1A7C3;
+    border-radius: 50px;
+
+    position: absolute;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+    z-index: 0;
+}
+
+body main #content section div h1 {
+    z-index: 1;
+    position: relative;
+    width: 80%;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body main #content section #text {
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body main #content div {
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body main #content div p {
+    margin-top: 1rem;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
