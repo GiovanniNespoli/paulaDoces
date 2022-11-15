@@ -20,9 +20,10 @@ header,
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 13vh;
     justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -92,6 +93,15 @@ header #headerContent nav div ul li a {
     font-family: 'Lato', sans-serif;
 }
 
+header #headerContent nav button a {
+    color: #000;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
 header #headerContent nav button {
     width: 20%;
     height: 40%;
@@ -99,13 +109,6 @@ header #headerContent nav button {
     background-color: #44d8e300;
     border: 1px solid #000;
     border-radius: 5px;
-
-    color: #000;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-decoration: underline;
-    text-underline-offset: 6px;
 
     transition: 0.3s;
     cursor: pointer;
@@ -121,8 +124,8 @@ header #headerContent nav div ul li:hover {
 }
 
 body section {
-    width: 100vw;
-    height: 30vh;
+    width: 100%;
+    height: 25vh;
 
     display: flex;
     flex-direction: column;
@@ -131,7 +134,7 @@ body section {
 }
 
 body section h1 {
-    font-size: 56px;
+    font-size: 2.8rem;
     color: #FFF;
     font-family: 'Poppins', sans-serif;
 
@@ -140,39 +143,82 @@ body section h1 {
 }
 
 body section #banner {
-
     margin-top: 1.5rem;
-}
-
-body section #banner,
-body section button p {
     color: #FFF;
     font-family: 'Red Hat Display', sans-serif;
     font-size: 22px;
     font-weight: 400;
 }
 
-body section button {
-    width: 14%;
-    height: 20%;
+body main {
+    margin-top: 4rem;
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body main h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+body main #headerContent .carousel {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body #buttonArea {
+    margin: 2rem 0rem;
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body #buttonArea #headerContent div a {
+    width: 30%;
+    height: 60%;
     background: linear-gradient(90deg, rgba(225, 167, 195, 1), rgba(208, 154, 180, 1));
     border: none;
     border-radius: 15px;
-
-    margin-top: 1.5rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     cursor: pointer;
-    transition: 0.7s;
+    transition: 0.5s ease-in-out;
+
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
 
     box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.3);
 }
 
-body section button:hover {
-    background: rgba(225, 167, 195, 0);
-    border: 3px solid rgba(225, 167, 195, 1);
+body #buttonArea #headerContent div a:hover {
     transform: scale(1.1);
+}
+
+
+body #buttonArea #headerContent div {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

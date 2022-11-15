@@ -52,7 +52,7 @@ body main #content section {
 
 body main #content section button {
     width: 35%;
-    height: 10%;
+    height: 13%;
 
     display: flex;
     justify-content: center;
@@ -106,14 +106,14 @@ body main #content section div #ball {
 body main #content section div h1 {
     z-index: 1;
     position: relative;
-    width: 80%;
-    font-size: 32px;
+    width: 100%;
+    font-size: 2rem;
     font-family: 'Poppins', sans-serif;
 }
 
 body main #content section #text {
     width: 100%;
-    font-size: 20px;
+    font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -129,7 +129,7 @@ body main #content div {
 
 body main #content div p {
     margin-top: 1rem;
-    font-size: 18px;
+    font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }

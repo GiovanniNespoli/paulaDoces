@@ -34,14 +34,14 @@ header {
 }
 
 
-header #headerContent .teste  {
+header #headerContent .teste {
     width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-header #headerContent .teste img  {
+header #headerContent .teste img {
     width: 50%;
 }
 
@@ -93,6 +93,15 @@ header #headerContent nav div ul li a {
     font-family: 'Lato', sans-serif;
 }
 
+header #headerContent nav button a {
+    color: #000;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
 header #headerContent nav button {
     width: 20%;
     height: 40%;
@@ -100,13 +109,6 @@ header #headerContent nav button {
     background-color: #44d8e300;
     border: 1px solid #000;
     border-radius: 5px;
-
-    color: #000;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-decoration: underline;
-    text-underline-offset: 6px;
 
     transition: 0.3s;
     cursor: pointer;
@@ -182,12 +184,12 @@ main div div button a {
     main img {
         width: 50%;
     }
-    
+
     header #headerContent nav {
-       width: 63%;
+        width: 63%;
     }
 
-    header #headerContent .teste img  {
+    header #headerContent .teste img {
         width: 70%;
     }
 
@@ -203,7 +205,7 @@ main div div button a {
 }
 
 @media only screen and (max-width: 1000px) {
-    header #headerContent .teste{
+    header #headerContent .teste {
         display: none;
     }
 
@@ -211,7 +213,7 @@ main div div button a {
         width: 100vw;
     }
 
-    header #headerContent .teste img  {
+    header #headerContent .teste img {
         width: 80%;
     }
 
@@ -225,8 +227,9 @@ main div div button a {
 }
 
 @media only screen and (max-width: 700px) {
+
     header #headerContent nav button,
-    header #headerContent nav div ul li a{
+    header #headerContent nav div ul li a {
         font-size: 1.1rem;
         padding: 2px;
     }
