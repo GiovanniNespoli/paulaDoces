@@ -98,6 +98,12 @@ section div#login div div.inputArea input::placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
+section div#login div button a {
+    color: #F193C0;
+    transition: 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
 section div#login div button {
     width: 40%;
     height: 15%;
@@ -115,13 +121,14 @@ section div#login div button {
     text-transform: uppercase;
     letter-spacing: 2px;
 
-    transition: 0.5s;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-
+section div#login div button:hover a {
+    color:  #fff;
+}
 section div#login div button:hover {
     background-color: #f193c0e4;
-    color: #fff;
 }
 
 section div#login a,

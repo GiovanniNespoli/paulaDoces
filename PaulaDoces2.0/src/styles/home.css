@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&family=Red+Hat+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    width: 100vw;
+    height: 100vh;
+
+    background:
+        url('../../assets/backCakes.svg') no-repeat;
+
+    background-size: cover;
+}
+
+body main {
+    width: 58%;
+    height: 87vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body main section h1,
+body main section h3,
+body main section div a {
+    color:  #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body main section h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 3rem;
+}
+
+body main section h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+}
+
+body main section {
+    width: 75%;
+    height: 35%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 13vh;
+}
+
+body main section div {
+    display: flex;
+}
+
+.btn {
+    margin-right: 4rem;
+}
+
+body main section div a {
+    padding: 0.8rem 4rem;
+    background-color: #D69EB9;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.244);
+}
+
+body main section div a:hover {
+    transform: scale(1.1);
+}
+
+body main section div a p {
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
