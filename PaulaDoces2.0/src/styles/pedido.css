@@ -50,6 +50,8 @@ body .content header div a {
     font-size: 1.25rem;
 
     font-family: 'Poppins', sans-serif;
+
+    padding: 5px 0px;
 }
 
 body .content main {
@@ -220,6 +222,11 @@ body #popUp div #btn {
     align-items: center;
     width: 70%;
     height: 10%;
+}
+
+input {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 body #popUp div h1,
