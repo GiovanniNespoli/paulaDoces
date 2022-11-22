@@ -1,0 +1,104 @@
+body {
+    background: url('../../assets/BolosBack.svg') no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+}
+
+body .content {
+    width: 75vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+body .content header {
+    width: 100%;
+    height: 13vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+body .content header img {
+    width: 12%;
+}
+
+body .content header div {
+
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#line {
+    width: 1px;
+    height: 50%;
+    border: #fff solid 1px;
+    background-color: #fff;
+}
+
+body .content header div a {
+    text-decoration: none;
+
+    color: #fff;
+    font-size: 1.25rem;
+
+    font-family: 'Poppins', sans-serif;
+
+    padding: 5px 0px;
+}
+
+body .content h1 {
+    color: #fff;
+    margin: 10vh auto 0px;
+    font-family: 'Poppins', sans-serif;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+body .content h1 span {
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+body .content .buttons {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body .content .buttons button {
+    width: 21%;
+    font-size: 1rem;
+    margin-top: 3vh;
+}
+
+body .content #cakesClosed {
+    overflow: hidden;
+    /* Hide the element content, while height = 0 */
+    height: 0;
+    opacity: 0;
+    transition: height 700ms, opacity 400ms ease-in-out;
+}
+
+body .content #cakesClosed.cakesOpened {
+    height: 30vh; 
+    opacity: 1;
+    background-color: rebeccapurple;
+    transition: height 700ms, opacity 400ms ease-in-out;
+}
