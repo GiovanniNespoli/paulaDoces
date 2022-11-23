@@ -1,7 +1,7 @@
 const template = document.createElement('template');
 
 template.innerHTML = `
-<link rel="stylesheet" href="../styles/hover/hoverStyles.css">
+<link rel="stylesheet" href="../../styles/hover/hoverStyles.css">
 <style>
     * {
         margin: 0;
@@ -131,14 +131,14 @@ template.innerHTML = `
 <header>
         <div id="headerContent">
             <div class="teste">
-                <img src="../../assets/paulaLogo.svg" alt="Logo Paula Doces">
+                <img src="../../../assets/paulaLogo.svg" alt="Logo Paula Doces">
             </div>
             <nav>
                 <div>
                     <ul>
-                        <li class="hover-underline-animation"><a href="./welcome.html">Início</a></li>
-                        <li class="hover-underline-animation"><a href="./produtos.html">Nossos bolos</a></li>
-                        <li class="hover-underline-animation"><a href="./sobre.html">Sobre nós</a></li>
+                        <li class="hover-underline-animation"><a href="../home/welcome.html">Início</a></li>
+                        <li class="hover-underline-animation"><a href="../products/produtos.html">Produtos</a></li>
+                        <li class="hover-underline-animation"><a href="../about/sobre.html">Sobre nós</a></li>
                     </ul>
                 </div>
                 <button><a href="https://api.whatsapp.com/send?phone=phone number">Contate nos</a></button>
@@ -157,5 +157,4 @@ class Component extends HTMLElement {
     }
 }
 
-if (!customElements.get('header-component')) 
-{ customElements.define('header-component', Component); }
+if (!customElements.get('header-component')) { customElements.define('header-component', Component); }

@@ -3,7 +3,7 @@ body {
     height: 100vh;
 
     background:
-        url('../../assets/background.svg') no-repeat;
+        url('../../../assets/background.svg') no-repeat;
 
     background-size: cover;
 
