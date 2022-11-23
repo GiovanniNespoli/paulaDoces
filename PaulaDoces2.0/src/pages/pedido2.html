@@ -11,20 +11,35 @@
     <link rel="stylesheet" href="../styles/pedido2.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../scripts/actions.js"></script>
     <title>Pedido | Paula Doces</title>
 </head>
 
 <body>
+    <div id="popUp">
+        <div>
+            <h1>Pedido feito com sucesso!</h1>
+            <img src="../../assets/joia.png" alt="imagem de comida gostosa">
+
+            <section id="btn">
+                <p>Verifique o seu email quando o pedido foi aprovado ou não</p>
+                <a href="">
+                    <button onclick="closePopUp()">Voltar</button>
+                </a>
+            </section>
+        </div>
+    </div>
     <div class="content">
         <header>
             <img src="../../assets/paulaLogo.svg" alt="">
             <div>
-                <a class="hover-underline-animation" href="#">Voltar</a>
+                <a class="hover-underline-animation" href="./welcome.html">Voltar</a>
                 <div id="line"></div>
-                <a class="hover-underline-animation" href="./cardapio.html">Pedido</a>
+                <a class="hover-underline-animation" href="#">Pedido</a>
                 <div id="line"></div>
-                <a class="hover-underline-animation" href="./cardapio.html">Cardápio</a>
+                <a class="hover-underline-animation" href="https://api.whatsapp.com/send?phone=phone number">Contato</a>
             </div>
             <img style="opacity: 0;" src="../../assets/paulaLogo.svg" alt="">
         </header>
@@ -58,12 +73,10 @@
             <div class="quantidade">
                 <div>
                     <h3>Quantidade: </h3>
-                    <input onchange="totalValue(this.value)" id="quantidadeBolos" type="number" min="0">
+                    <input name="carrinhoBolo" onchange="totalValue(this.value)" id="quantidadeBolos" type="number"
+                        min="0">
                 </div>
-                <div>
-                    <h3>Valor total: </h3>
-                    <p>R$ {100,00}</p>
-                </div>
+                <button>Adicionar no carrinho</button>
             </div>
         </section>
 
@@ -89,12 +102,10 @@
             <div class="quantidade">
                 <div>
                     <h3>Quantidade: </h3>
-                    <input onchange="totalValue(this.value)" id="quantidadeBolos" type="number" min="0">
+                    <input name="carrinhoBolo" onchange="totalValue(this.value)" id="quantidadeBolos" type="number"
+                        min="0">
                 </div>
-                <div>
-                    <h3>Valor total: </h3>
-                    <p>R$ {100,00}</p>
-                </div>
+                <button>Adicionar no carrinho</button>
             </div>
         </section>
 
@@ -120,16 +131,19 @@
             <div class="quantidade">
                 <div>
                     <h3>Quantidade: </h3>
-                    <input onchange="totalValue(this.value)" id="quantidadeBolos" type="number" min="0">
+                    <input name="carrinhoBolo" onchange="totalValue(this.value)" id="quantidadeBolos" type="number"
+                        min="0">
                 </div>
-                <div>
-                    <h3>Valor total: </h3>
-                    <p>R$ {100,00}</p>
-                </div>
+                <button>Adicionar no carrinho</button>
             </div>
         </section>
 
-
+        <button id="btn">
+            Finalizar pedido
+            <span class="material-symbols-outlined">
+                shopping_bag
+            </span>
+        </button>
     </div>
 </body>
 

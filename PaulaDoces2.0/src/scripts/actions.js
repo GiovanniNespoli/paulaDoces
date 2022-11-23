@@ -9,6 +9,12 @@ document.addEventListener('click', (event) => {
 }, false);
 
 document.addEventListener('click', (event) => {
+    if (!event.target.matches('#btn')) return;
+
+    document.getElementById("popUp").style.display = "block";
+}, false);
+
+document.addEventListener('click', (event) => {
     if (!event.target.matches('#cadyButton')) return;
 
     const element = document.getElementById("candyClosed");
@@ -32,13 +38,14 @@ async function selected(valor, name) {
 
     var verify = localStorage.getItem(valor);
 
+    const dataValues = JSON.stringify({ valor, name })
+
     if (verify) {
         console.log("entrou1");
         document.getElementsByName(name).forEach(element => {
             element.style["border"] = "none";
         });
         localStorage.removeItem(valor);
-
         return valor
     }
 
@@ -48,8 +55,14 @@ async function selected(valor, name) {
             element.style["border"] = "lightgreen 0.5rem solid";
             element.style["borderRadius"] = "1rem";
         });
-        localStorage.setItem(valor, valor);
+        localStorage.setItem(valor, dataValues);
         return valor
     }
+}
+
+async function totalValue(valor) {
+    console.log(valor);
+
+    console.log(quantidade);
 }
 
