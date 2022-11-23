@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../styles/hover/hoverStyles.css">
     <link rel="stylesheet" href="../styles/hover/buttonStyles.css">
     <link rel="stylesheet" href="../styles/pedido2.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../scripts/actions.js"></script>
     <title>Pedido | Paula Doces</title>
 </head>
@@ -31,23 +32,104 @@
             Selecione o seu pedido
             <span class="material-symbols-outlined">
                 shopping_cart
-            </span> 
+            </span>
         </h1>
+
+        <!-- BOLOS -->
 
         <div class="buttons">
             <button id="cakeButton" class="button button-2">Vou querer um bolo...</button>
         </div>
 
         <section id="cakesClosed">
+            <h3>Clique no bolo para selecionar o pedido</h3>
+            <div>
+                <button name="Bolo de chocolate" value="30" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+                <button name="Bolo de cenoura" value="50" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+                <button name="Bolo de limão" value="60" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+            </div>
 
+            <div class="quantidade">
+                <div>
+                    <h3>Quantidade: </h3>
+                    <input onchange="totalValue(this.value)" id="quantidadeBolos" type="number" min="0">
+                </div>
+                <div>
+                    <h3>Valor total: </h3>
+                    <p>R$ {100,00}</p>
+                </div>
+            </div>
         </section>
 
+        <!-- DOCES -->
+
         <div class="buttons">
-            <button id="cadyButton" class="button button-2">Vou querer uns salgadinhos...</button>
+            <button id="cadyButton" class="button button-2">Vou querer uns docinhos...</button>
         </div>
+        <section id="candyClosed">
+            <h3>Clique no docinho para selecionar o pedido</h3>
+            <div>
+                <button name="Brigadeiro" value="30" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+                <button name="Beijinho" value="50" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+                <button name="Bem casado" value="60" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+            </div>
+
+            <div class="quantidade">
+                <div>
+                    <h3>Quantidade: </h3>
+                    <input onchange="totalValue(this.value)" id="quantidadeBolos" type="number" min="0">
+                </div>
+                <div>
+                    <h3>Valor total: </h3>
+                    <p>R$ {100,00}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Salgadinhos -->
+
         <div class="buttons">
-            <button id="Button" class="button button-2">Vou querer uns docinhos...</button>
+            <button id="salgadosButton" class="button button-2">Vou querer uns salgadinhos...</button>
         </div>
+        <section id="salgadosClosed">
+            <h3>Clique no salgado para selecionar o pedido</h3>
+            <div>
+                <button name="Coxinha" value="30" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+                <button name="Bolinha de queijo" value="50" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+                <button name="Kibe" value="60" onclick="selected(this.value, this.name)">
+                    <img src="../../assets/cakeImg.svg" alt="">
+                </button>
+            </div>
+
+            <div class="quantidade">
+                <div>
+                    <h3>Quantidade: </h3>
+                    <input onchange="totalValue(this.value)" id="quantidadeBolos" type="number" min="0">
+                </div>
+                <div>
+                    <h3>Valor total: </h3>
+                    <p>R$ {100,00}</p>
+                </div>
+            </div>
+        </section>
+
+
     </div>
 </body>
 
