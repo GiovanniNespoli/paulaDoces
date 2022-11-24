@@ -216,6 +216,13 @@ thead {
     border: none;
 }
 
+.lastTable button {
+    margin-left: 1rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1.5rem;
+}
+
 th {
     font-size: 1.5rem;
     color: #fff;
