@@ -1,0 +1,112 @@
+body {
+    background: url('../../../assets/BolosBack.svg') no-repeat;
+    background-size: cover;
+}
+
+#headerContent {
+    width: 85vw;
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+body section {
+    width: 100%;
+    height: 25vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body section h1 {
+    font-size: 2.8rem;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+
+    width: 50%;
+    text-align: center;
+}
+
+body section #banner {
+    margin-top: 1.5rem;
+    color: #FFF;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+body main {
+    margin-top: 4rem;
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body main h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+body main #headerContent .carousel {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body #buttonArea {
+    margin: 2rem 0rem;
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body #buttonArea #headerContent a {
+    width: 30%;
+    height: 60%;
+    background: linear-gradient(90deg, rgba(225, 167, 195, 1), rgba(208, 154, 180, 1));
+    border: none;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+
+    box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.3);
+}
+
+body #buttonArea #headerContent a:hover {
+    transform: scale(1.1);
+}
+
+
+body #buttonArea #headerContent {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
