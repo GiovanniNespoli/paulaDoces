@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/globalADM.css">
+    <link rel="stylesheet" href="styles/lista.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Lista de pedidos</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Acesso do administrador</h1>
+    </header>
+    <main>
+        <nav id="nav">
+            <div id="openCloseNav">
+            </div>
+            <ul id="topMenu">
+                <li class="page">
+                    <a href="lista">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                        <p>Pedidos</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="realizados">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                        <p>Pedidos realizados</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="alterar">
+                        <ion-icon name="create-outline"></ion-icon>
+                        <p>Alterar Pedidos</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="configuracao">
+                        <ion-icon name="bar-chart-outline"></ion-icon>
+                        <p>Estatística</p>
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul id="bottomMenu">
+                <li>
+                    <a href="/">
+                        <ion-icon name="exit-outline"></ion-icon>
+                        <p>sair</p>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <div id="content">
+            <h2>Lista de todos os pedidos</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th class="pedido">Pedido</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Valor</th>
+                        <th class="lastTable">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="pedido">Bolo</td>
+                        <td>Minha rua</td>
+                        <td>4002-8922</td>
+                        <td>R$ 200,00</td>
+                        <td class="lastTable">Fazer</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="pedido">Bolo</td>
+                        <td>Minha rua</td>
+                        <td>4002-8922</td>
+                        <td>R$ 200,00</td>
+                        <td class="lastTable">Fazer</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="pedido">Bolo</td>
+                        <td>Minha rua</td>
+                        <td>4002-8922</td>
+                        <td>R$ 200,00</td>
+                        <td class="lastTable">Fazer</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="pedido">Bolo</td>
+                        <td>Minha rua</td>
+                        <td>4002-8922</td>
+                        <td>R$ 200,00</td>
+                        <td class="lastTable">Fazer</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="pedido">Bolo</td>
+                        <td>Minha rua</td>
+                        <td>4002-8922</td>
+                        <td>R$ 200,00</td>
+                        <td class="lastTable">Fazer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+<script src="../scripts/index.js"></script>
+<script src="../../../scripts/header.js"></script>
+
+</html>

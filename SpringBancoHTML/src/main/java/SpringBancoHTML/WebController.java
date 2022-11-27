@@ -35,6 +35,24 @@ public class WebController {
         return "produtos";
     }
     
+    @RequestMapping("/pedido")
+    public String Request(Model modelo) {
+        System.out.println("Pedido");
+        return "pedido";
+    }
+    
+    @RequestMapping("/sobre")
+    public String About(Model modelo){
+        System.out.println("Sobre nós");
+        return "sobre";
+    }
+    
+    @RequestMapping("/cardapio")
+    public String Cardapio(Model modelo){
+        System.out.println("Cardápio");
+        return "cardapio";
+    }
+    
     @RequestMapping("/form")
     public String Form(Model modelo) {
         System.out.println("Form carregando");
@@ -71,11 +89,6 @@ public class WebController {
         obj.closeConnectionMySql(conexao);
         return "bancoconecta";
     }      
-    @RequestMapping("/sobre")
-    public String Banco(Model modelo){
-        System.out.println("Sobre nós");
-        return "sobre";
-    } 
     
     @RequestMapping(value="/bancoMongo", method=RequestMethod.POST)
     public String BancoMongo(Model modelo, String code){

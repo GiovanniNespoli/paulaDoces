@@ -34,31 +34,31 @@ document.addEventListener('click', (event) => {
     console.log(element);
 }, false);
 
-async function selected(valor, name) {
-
-    var verify = localStorage.getItem(valor);
-
-    const dataValues = JSON.stringify({ valor, name })
-
-    if (verify) {
-        console.log("entrou1");
-        document.getElementsByName(name).forEach(element => {
-            element.style["border"] = "none";
-        });
-        localStorage.removeItem(valor);
-        return valor
-    }
-
-    if (!verify) {
-        console.log("entrou2");
-        document.getElementsByName(name).forEach(element => {
-            element.style["border"] = "lightgreen 0.5rem solid";
-            element.style["borderRadius"] = "1rem";
-        });
-        localStorage.setItem(valor, dataValues);
-        return valor
-    }
-}
+//async function selected(valor, name) {
+//
+//    var verify = localStorage.getItem(valor);
+//
+//    const dataValues = JSON.stringify({ valor, name })
+//
+//    if (verify) {
+//        console.log("entrou1");
+//        document.getElementsByName(name).forEach(element => {
+//            element.style["border"] = "none";
+//        });
+//        localStorage.removeItem(valor);
+//        return valor
+//    }
+//
+//    if (!verify) {
+//        console.log("entrou2");
+//        document.getElementsByName(name).forEach(element => {
+//            element.style["border"] = "lightgreen 0.5rem solid";
+//            element.style["borderRadius"] = "1rem";
+//        });
+//        localStorage.setItem(valor, dataValues);
+//        return valor
+//    }
+//}
 
 async function totalValue(valor) {
     console.log(valor);
