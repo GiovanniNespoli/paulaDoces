@@ -41,10 +41,10 @@ public class UserRepository {
             Connection con) {
         try {
             Statement stmt = con.createStatement();
-            stmt.execute("INSERT INTO Usuario (name, email, password) " +
-                    "VALUES(\"" + nome + "\",\"" + email + "\", \"" + password + "\";");
+            //stmt.execute("INSERT INTO Usuario (name, email, password) " +
+                   // "VALUES(\"" + nome + "\",\"" + email + "\", \"" + password + "\";");
         }catch (SQLException e) {
-            throw new RuntimeException(e)
+            throw new RuntimeException(e);
         }
     }
 

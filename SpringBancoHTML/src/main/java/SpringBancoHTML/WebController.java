@@ -10,7 +10,31 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class WebController {
-
+    
+    @RequestMapping("/")
+    public String Welcome(Model modelo) {
+        System.out.println("Boas vindas");
+        return "welcome";
+    }
+    
+    @RequestMapping("/login")
+    public String Login(Model modelo) {
+        System.out.println("Login");
+        return "login";
+    }
+    
+    @RequestMapping("/cadastro")
+    public String SingUp(Model modelo) {
+        System.out.println("Cadastro");
+        return "cadastro";
+    }
+    
+    @RequestMapping("/produtos")
+    public String Product(Model modelo) {
+        System.out.println("Produtos");
+        return "produtos";
+    }
+    
     @RequestMapping("/form")
     public String Form(Model modelo) {
         System.out.println("Form carregando");
@@ -47,10 +71,10 @@ public class WebController {
         obj.closeConnectionMySql(conexao);
         return "bancoconecta";
     }      
-    @RequestMapping("/banco")
+    @RequestMapping("/sobre")
     public String Banco(Model modelo){
-        System.out.println("Consulta");
-        return "banco";
+        System.out.println("Sobre nós");
+        return "sobre";
     } 
     
     @RequestMapping(value="/bancoMongo", method=RequestMethod.POST)

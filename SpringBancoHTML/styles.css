@@ -1,0 +1,130 @@
+body {
+    background:
+        url('../../../assets/background.svg') no-repeat;
+
+    background-size: cover;
+}
+
+#headerContent {
+    width: 85vw;
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    width: 100vw;
+    height: 87vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+main img {
+    width: 40%;
+    margin-bottom: 5rem;
+}
+
+main div {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+main div div {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main div div h1 {
+    color: #FFF;
+    font-size: 50px;
+    font-family: Poppins;
+    font-weight: 700;
+
+}
+
+main div div p {
+    text-align: left;
+    font-size: 24px;
+    color: #FFF;
+    font-family: 'Red Hat Text', sans-serif;
+
+    margin: 5rem 0px;
+
+}
+
+main div div button a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Red Hat Text', sans-serif;
+
+}
+
+@media only screen and (max-width: 1400px) {
+    main img {
+        width: 50%;
+    }
+
+    header #headerContent nav {
+        width: 63%;
+    }
+
+    header #headerContent .teste img {
+        width: 70%;
+    }
+
+    main div {
+        justify-content: center;
+        align-items: center;
+    }
+
+    main div div h1,
+    main div div p {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header #headerContent .teste {
+        display: none;
+    }
+
+    header #headerContent nav {
+        width: 100vw;
+    }
+
+    header #headerContent .teste img {
+        width: 80%;
+    }
+
+    main img {
+        display: none;
+    }
+
+    main div {
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    header #headerContent nav button,
+    header #headerContent nav div ul li a {
+        font-size: 1.1rem;
+        padding: 2px;
+    }
+
+    header #headerContent nav {
+        width: 85vw;
+    }
+}
