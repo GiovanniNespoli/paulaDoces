@@ -10,14 +10,16 @@ import java.sql.ResultSet;
 public class UserService {
 
     public boolean Login(String email, String password, Connection con) {
+        System.out.println("IN SERVICE " + email + " " + password);
+
         try {
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt
-                    .executeQuery("SELECT * FROM user email = \"" + email + "\" AND password = \"" + password + "\";");
+            ResultSet rs = stmt.executeQuery(
+                    "SELECT * FROM user WHERE email = \"" + email + "\" AND password = \"" + password + "\";");
 
-            System.out.println(rs);
-            if (rs != null) {
-                System.out.println("Foi");
+            System.out.println("RS " + rs);
+
+            while(rs.next()) {
                 return true;
             }
 
