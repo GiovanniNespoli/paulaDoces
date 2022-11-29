@@ -15,17 +15,17 @@
     <section>
         <div id="login">
             <img src="assets/paulaLogo.svg" alt="" class="img">
-            <div>
+            <form method="post" action="/login" th:object="${user}">
                 <div class="inputArea">
                     <img src="assets/email.svg" alt="Image de usuário ">
-                    <input placeholder="Email" type="email">
+                    <input placeholder="Email" name="email" th:value="${user.email}" type="email">
                 </div>
                 <div class="inputArea">
                     <img src="assets/lock.svg" alt="Image de usuário ">
-                    <input placeholder="Senha" type="password">
+                    <input placeholder="Senha" name="password" th:value="${user.password}" type="password">
                 </div>
-                <button><a href="pedido">Login</a></button>
-            </div>
+                <button type="submit"><a>Login</a></button>
+            </form>
 
             <p>Não possui um login ?</p>
             <a href="/cadastro" class="hover-underline-animation">Cadastre-se</a>
