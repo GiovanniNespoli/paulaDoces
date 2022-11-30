@@ -10,8 +10,6 @@ import java.sql.ResultSet;
 public class UserService {
 
     public boolean Login(String email, String password, Connection con) {
-        System.out.println("IN SERVICE " + email + " " + password);
-
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(
@@ -19,7 +17,7 @@ public class UserService {
 
             System.out.println("RS " + rs);
 
-            while(rs.next()) {
+            while (rs.next()) {
                 return true;
             }
 
@@ -28,6 +26,17 @@ public class UserService {
         } catch (Exception e) {
             System.out.println(e);
             return false;
+        }
+    }
+
+    public void createUser(String name, String email, String password, Connection con) {
+        try {
+            Statement stmt = con.createStatement();
+            stmt.execute("INSERT INTO User (name,email,password) VALUES(\"" + name + "\",\"" + email + "\",\"" + password + "\");");
+
+            System.out.println("Foi");
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 }

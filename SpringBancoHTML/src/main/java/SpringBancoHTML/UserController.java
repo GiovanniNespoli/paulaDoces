@@ -12,6 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import Connections.conectar;
 import Models.User;
+import Models.Request;
+import Services.RequestService;
 import Services.UserService;
 
 @Controller
@@ -19,6 +21,7 @@ public class UserController {
 
     conectar con = new conectar();
     UserService userService = new UserService();
+    RequestService requestService = new RequestService();
 
     @RequestMapping("/")
     public String Welcome(Model modelo) {
@@ -56,10 +59,22 @@ public class UserController {
         }
     }
 
-    @RequestMapping("/cadastro")
-    public String SingUp(Model modelo) {
+    @GetMapping("/cadastro")
+    public ModelAndView SingUp() {
         System.out.println("Cadastro");
-        return "cadastro";
+        ModelAndView mv = new ModelAndView("cadastro");
+        mv.addObject("user", new User());
+        return mv;
+    }
+
+    @PostMapping("/cadastro")
+    public String createNewUser(User user) {
+        try {
+            userService.createUser(user.getName(), user.getEmail(), user.getPassword(), con.connectionMySql());
+            return "redirect:pedido";
+        } catch (Exception e) {
+            return "redirect:error";
+        }
     }
 
     @RequestMapping("/produtos")
@@ -68,10 +83,27 @@ public class UserController {
         return "produtos";
     }
 
-    @RequestMapping("/pedido")
-    public String Request(Model modelo) {
+    @GetMapping("/pedido")
+    public ModelAndView Request(Model modelo) {
         System.out.println("Pedido");
-        return "pedido";
+        ModelAndView mv = new ModelAndView("pedido");
+        mv.addObject("request", new Request());
+        return mv;
+    }
+
+    @PostMapping("/pedido")
+    public void createRequest(Request request) {
+        try {
+            requestService.createRequest(
+                    request.getRequest(),
+                    request.getPhone(),
+                    request.getAdress(),
+                    request.getComplement(),
+                    request.getDeliveryDate(),
+                    con.connectionMySql());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     @RequestMapping("/sobre")

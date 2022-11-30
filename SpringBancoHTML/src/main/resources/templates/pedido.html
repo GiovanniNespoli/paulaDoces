@@ -45,31 +45,31 @@
                 <section>
                     <div id="area">
                         <h1>Faça o seu pedido</h1>
-                        <form action="">
+                        <form method="post" action="/pedido" th:object="${request}">
                             <div id="firstInput">
                                 <p>Pedido :</p>
-                                <input type="text" placeholder="Digite o pedido e a quantidade...">
+                                <input type="text" name="request" th:value="${request.request}" placeholder="Digite o pedido e a quantidade...">
                             </div>
                             <div class="formsInput">
                                 <div>
                                     <p>Telefone :</p>
-                                    <input id="telefone" style="width: 73%;" type="text" placeholder="(00) 0000-0000">
+                                    <input id="telefone" name="phone" th:value="${request.phone}" style="width: 73%;" type="text" placeholder="(00) 0000-0000">
                                 </div>
                                 <div>
                                     <p>Endereço :</p>
-                                    <input style="width: 73%;" type="text" placeholder="Seu endereço...">
+                                    <input style="width: 73%;" name="adress" th:value="${request.adress}" type="text" placeholder="Seu endereço...">
                                 </div>
                                 <div>
                                     <p>Complemento :</p>
-                                    <input style="width: 63%;" type="text" placeholder="Casa...">
+                                    <input style="width: 63%;" name="complement" th:value="${request.complement}" type="text" placeholder="Casa...">
                                 </div>
                                 <div>
                                     <p>Data de entrega :</p>
-                                    <input style="width: 63%;" type="date" min="inputDate()">
+                                    <input style="width: 63%;" name="deliveryDate" th:value="${request.deliveryDate}" type="date" min="inputDate()">
                                 </div>
                             </div>
 
-                            <button type="button" onclick="sendRequest()">Finalize seu pedido</button>
+                            <button type="submit" onclick="sendRequest()">Finalize seu pedido</button>
                         </form>
                     </div>
                 </section>

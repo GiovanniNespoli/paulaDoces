@@ -41,7 +41,7 @@ section div#login {
     align-items: center;
 }
 
-section div#login div {
+section div#login form {
     width: 80%;
     height: 45%;
 
@@ -52,7 +52,7 @@ section div#login div {
     flex-direction: column;
 }
 
-section div#login div div.inputArea {
+section div#login form div.inputArea {
     width: 85%;
     height: 17%;
     border-radius: 30px;
@@ -64,13 +64,13 @@ section div#login div div.inputArea {
 
 }
 
-section div#login div div.inputArea img {
+section div#login form div.inputArea img {
     width: 24px;
     height: 24px;
     opacity: 0.5;
 }
 
-section div#login div div.inputArea input {
+section div#login form div.inputArea input {
     width: 70%;
     height: 100%;
 
@@ -86,17 +86,17 @@ section div#login div div.inputArea input {
     margin-left: 1.2rem;
 }
 
-section div#login div div.inputArea input::placeholder {
+section div#login form div.inputArea input::placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-section div#login div button a {
+section div#login form button a {
     color: #F193C0;
     transition: 0.3s ease-in-out;
     font-size: 1rem;
 }
 
-section div#login div button {
+section div#login form button {
     width: 40%;
     height: 15%;
 
@@ -116,12 +116,19 @@ section div#login div button {
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-section div#login div button:hover a {
+section div#login form button:hover a {
     color:  #fff;
 }
-section div#login div button:hover {
+section div#login form button:hover {
     background-color: #f193c0e4;
 }
+
+section div#login form div.inputArea img {
+    width: 24px;
+    height: 24px;
+    margin: auto 0px;
+    opacity: 0.5;
+}   
 
 section div#login a,
 section div#login p {
