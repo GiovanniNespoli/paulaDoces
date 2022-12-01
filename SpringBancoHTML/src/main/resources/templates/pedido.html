@@ -1,94 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/styles/global.css">
-        <link rel="stylesheet" href="/styles/hover/hoverStyles.css">
-        <link rel="stylesheet" href="/styles/hover/buttonStyles.css">
-        <link rel="stylesheet" href="/styles/pedido.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-        <title>Pedido | Paula Doces</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/hover/hoverStyles.css">
+    <link rel="stylesheet" href="/styles/hover/buttonStyles.css">
+    <link rel="stylesheet" href="/styles/pedido.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <title>Pedido | Paula Doces</title>
+</head>
 
-    <body>
-        <div id="popUp">
+<body>
+    <div class="content">
+        <header>
+            <img src="../../assets/paulaLogo.svg" alt="">
             <div>
-                <h1>Pedido feito com sucesso!</h1>
-                <img src="../../assets/joia.png" alt="imagem de comida gostosa">
-
-                <section id="btn">
-                    <p>Pagamento do pedido feito na entrega...</p>
-                    <a href="">
-                        <button onclick="closePopUp()">Voltar</button>
-                    </a>
-                </section>
+                <a class="hover-underline-animation" href="/">Voltar</a>
+                <div id="line"></div>
+                <a class="hover-underline-animation" href="pedido">Pedido</a>
+                <div id="line"></div>
+                <a class="hover-underline-animation" href="cardapio">Cardápio</a>
             </div>
-        </div>
-        <div class="content"> 
-            <header>
-                <img src="../../assets/paulaLogo.svg" alt="">
-                <div>
-                    <a class="hover-underline-animation" href="/">Voltar</a>
-                    <div id="line"></div>
-                    <a class="hover-underline-animation" href="pedido">Pedido</a>
-                    <div id="line"></div>
-                    <a class="hover-underline-animation" href="cardapio">Cardápio</a>
+            <img style="opacity: 0;" src="../../assets/paulaLogo.svg" alt="">
+        </header>
+        <main>
+            <section>
+                <div id="area">
+                    <h1>Faça o seu pedido</h1>
+                    <form method="post" action="/pedido" th:object="${request}">
+                        <div id="firstInput">
+                            <p>Pedido :</p>
+                            <input type="text" name="request" th:value="${request.request}"
+                                placeholder="Digite o pedido e a quantidade...">
+                        </div>
+                        <div class="formsInput">
+                            <div>
+                                <p>Telefone :</p>
+                                <input id="telefone" name="phone" th:value="${request.phone}" style="width: 73%;"
+                                    type="text" placeholder="(00) 0000-0000">
+                            </div>
+                            <div>
+                                <p>Endereço :</p>
+                                <input style="width: 73%;" name="adress" th:value="${request.adress}" type="text"
+                                    placeholder="Seu endereço...">
+                            </div>
+                            <div>
+                                <p>Complemento :</p>
+                                <input style="width: 63%;" name="complement" th:value="${request.complement}"
+                                    type="text" placeholder="Casa...">
+                            </div>
+                            <div>
+                                <p>Data de entrega :</p>
+                                <input style="width: 63%;" name="deliveryDate" th:value="${request.deliveryDate}"
+                                    type="date" min="inputDate()">
+                            </div>
+                        </div>
+
+                        <button type="submit" onclick="sendRequest()">Finalize seu pedido</button>
+                    </form>
                 </div>
-                <img style="opacity: 0;" src="../../assets/paulaLogo.svg" alt="">
-            </header>
-            <main>
-                <section>
-                    <div id="area">
-                        <h1>Faça o seu pedido</h1>
-                        <form method="post" action="/pedido" th:object="${request}">
-                            <div id="firstInput">
-                                <p>Pedido :</p>
-                                <input type="text" name="request" th:value="${request.request}" placeholder="Digite o pedido e a quantidade...">
-                            </div>
-                            <div class="formsInput">
-                                <div>
-                                    <p>Telefone :</p>
-                                    <input id="telefone" name="phone" th:value="${request.phone}" style="width: 73%;" type="text" placeholder="(00) 0000-0000">
-                                </div>
-                                <div>
-                                    <p>Endereço :</p>
-                                    <input style="width: 73%;" name="adress" th:value="${request.adress}" type="text" placeholder="Seu endereço...">
-                                </div>
-                                <div>
-                                    <p>Complemento :</p>
-                                    <input style="width: 63%;" name="complement" th:value="${request.complement}" type="text" placeholder="Casa...">
-                                </div>
-                                <div>
-                                    <p>Data de entrega :</p>
-                                    <input style="width: 63%;" name="deliveryDate" th:value="${request.deliveryDate}" type="date" min="inputDate()">
-                                </div>
-                            </div>
+            </section>
+        </main>
+    </div>
+</body>
 
-                            <button type="submit" onclick="sendRequest()">Finalize seu pedido</button>
-                        </form>
-                    </div>
-                </section>
-            </main>
-        </div>
-    </body>
+<script>
+    {
 
-    <script>
-        {
-            function sendRequest() {
-                document.getElementById("popUp").style.display = "block";
-            }
-
-            function closePopUp() {
-                document.getElementById("popUp").style.display = "none";
-            }
-
-            $("#telefone, #celular").mask("(00) 00000-0000");
-        }
-    </script>
+        $("#telefone, #celular").mask("(00) 00000-0000");
+    }
+</script>
 
 </html>

@@ -4,19 +4,29 @@ import java.sql.Date;
 
 public class Request {
     private int id;
-    private String request, phone, adress, complement;
+    private String request, phone, adress, complement, status;
     private Date deliveryDate;
 
     public Request() {
     }
 
-    public Request(int id, String request, String phone, String adress, String complement, Date deliveryDate) {
+    public Request(int id, String request, String phone, String adress, String complement, Date deliveryDate, String status) {
         this.id = id;
         this.request = request;
         this.phone = phone;
         this.adress = adress;
         this.complement = complement;
         this.deliveryDate = deliveryDate;
+        this.status = status;
+    }
+
+    public Request(int id, String request, String phone, String adress, Date deliveryDate, String status) {
+        this.id = id;
+        this.request = request;
+        this.phone = phone;
+        this.adress = adress;
+        this.deliveryDate = deliveryDate;
+        this.status = status;
     }
     
     public String getComplement() {
@@ -65,6 +75,14 @@ public class Request {
 
     public void setDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 }

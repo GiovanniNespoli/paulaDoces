@@ -28,13 +28,12 @@ body .content header img {
 
 body .content header div {
 
-    width: 25%;
+    width: 37%;
     height: 100%;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 #line {

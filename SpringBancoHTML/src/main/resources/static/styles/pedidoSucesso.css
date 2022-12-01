@@ -1,0 +1,59 @@
+body {
+    background: url('/assets/BolosBack.svg') no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 60vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    width: 30%;
+}
+
+a {
+    background-color: #F193C0;
+    width: 15%;
+    height: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.244);
+
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+
+    transition: 0.5s ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #000;
+}

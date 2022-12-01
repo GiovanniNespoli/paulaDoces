@@ -43,12 +43,6 @@
                         <p>Alterar Pedidos</p>
                     </a>
                 </li>
-                <li>
-                    <a href="configuracao">
-                        <ion-icon name="bar-chart-outline"></ion-icon>
-                        <p>Estatística</p>
-                    </a>
-                </li>
 
             </ul>
 
@@ -67,100 +61,37 @@
             <table class="styled-table">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th class="id">Id</th>
                         <th class="pedido">Pedido</th>
-                        <th>Endereço</th>
-                        <th>Telefone</th>
-                        <th>Valor</th>
+                        <th class="endereco">Endereço</th>
+                        <th class="telefone">Telefone</th>
+                        <th class="telefone">Entrega</th>
                         <th class="lastTable">Status</th>
+                        <th class="lastTable">Editar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer
-                            <button>
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button>
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
+                    <tr data-th-each="request : ${request}">
+                        <td class="id" data-th-text="${request.id}">1</td>
+                        <td class="pedido" data-th-text="${request.request}"></td>
+                        <td class="endereco" data-th-text="${request.adress}"></td>
+                        <td class="telefone" data-th-text="${request.phone}"></td>
+                        <td class="telefone" data-th-text="${{request.deliveryDate}}"></td>
+                        <td class="lastTable" data-th-text="${request.status}"></td>
+                        <td class="editar">
+                            <form  th:action="@{update}" method="post">
+                                <button name="id" th:value="${request.id}">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </button>
+                            </form>
+                            <form  th:action="@{deletar}" method="post">
+                                <button name="id" th:value="${request.id}">
+                                    <ion-icon name="close-circle-outline"></ion-icon>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer
-                            <button>
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button>
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer
-                            <button>
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button>
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer
-                            <button>
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button>
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer
-                            <button>
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button>
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-
             </table>
         </div>
     </main>

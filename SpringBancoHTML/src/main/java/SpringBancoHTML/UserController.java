@@ -1,13 +1,10 @@
 package SpringBancoHTML;
 
-import java.sql.Connection;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import Connections.conectar;
@@ -46,6 +43,11 @@ public class UserController {
     public String Validation(User user) {
         try {
 
+            if (user.getEmail().equals("adm@gmail.com")
+                    && user.getPassword().equals("123")) {
+                return "redirect:lista";
+            }
+
             boolean login = userService.Login(user.getEmail(), user.getPassword(), con.connectionMySql());
 
             if (!login) {
@@ -71,7 +73,7 @@ public class UserController {
     public String createNewUser(User user) {
         try {
             userService.createUser(user.getName(), user.getEmail(), user.getPassword(), con.connectionMySql());
-            return "redirect:pedido";
+            return "redirect:requestSucesso";
         } catch (Exception e) {
             return "redirect:error";
         }
@@ -92,7 +94,7 @@ public class UserController {
     }
 
     @PostMapping("/pedido")
-    public void createRequest(Request request) {
+    public String createRequest(Request request) {
         try {
             requestService.createRequest(
                     request.getRequest(),
@@ -101,9 +103,22 @@ public class UserController {
                     request.getComplement(),
                     request.getDeliveryDate(),
                     con.connectionMySql());
+            
+            return "redirect:pedidoSucesso";
         } catch (Exception e) {
             System.out.println(e);
+            return "redirect:error";
         }
+    }
+
+    @RequestMapping("/pedidoSucesso")
+    public String RequestSucess() {
+        return "pedidoSucesso";
+    }
+
+    @RequestMapping("/requestSucesso")
+    public String SingUpSucess() {
+        return "cadastroSucesso";
     }
 
     @RequestMapping("/sobre")
@@ -118,10 +133,4 @@ public class UserController {
         return "cardapio";
     }
 
-    @RequestMapping("/form")
-    public String Form(Model modelo) {
-        System.out.println("Form carregando");
-        modelo.addAttribute("mensagem", "Boas vindas!");
-        return "form";
-    }
 }

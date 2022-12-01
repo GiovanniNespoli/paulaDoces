@@ -42,12 +42,6 @@
                         <p>Alterar Pedidos</p>
                     </a>
                 </li>
-                <li>
-                    <a href="configuracao">
-                        <ion-icon name="bar-chart-outline"></ion-icon>
-                        <p>Estatística</p>
-                    </a>
-                </li>
 
             </ul>
 
@@ -66,62 +60,22 @@
             <table class="styled-table">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th class="id">Id</th>
                         <th class="pedido">Pedido</th>
-                        <th>Endereço</th>
-                        <th>Telefone</th>
-                        <th>Valor</th>
+                        <th class="endereco">Endereço</th>
+                        <th class="telefone">Telefone</th>
+                        <th>Entrega</th>
                         <th class="lastTable">Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="pedido">Bolo</td>
-                        <td>Minha rua</td>
-                        <td>4002-8922</td>
-                        <td>R$ 200,00</td>
-                        <td class="lastTable">Fazer</td>
+                    <tr data-th-each="request : ${request}">
+                        <td class="id" data-th-text="${request.id}"></td>
+                        <td data-th-text="${request.request}" class="pedido"></td>
+                        <td class="endereco" data-th-text="${request.adress}"></td>
+                        <td class="telefone" data-th-text="${request.phone}"></td>
+                        <td data-th-text="${{request.deliveryDate}}"></td>
+                        <td class="lastTable" data-th-text="${request.status}"></td>
                     </tr>
                 </tbody>
             </table>
